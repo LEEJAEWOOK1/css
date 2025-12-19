@@ -1,0 +1,28 @@
+#modal {
+    position: absolute; background-color: rgba(0, 0, 0, 0.1);
+    top: 0; left: 0;
+}
+a{position: absolute; z-index: 10; background-color: aqua;}
+
+#static2, #relative2, #absolute2, #fixed2 {width: 100px; height: 100px;}
+#static2 {background-color: rebeccapurple; z-index: 1;} /*z-index: 순서배치(숫자 클수록 위로 옴)*/
+#relative2 {background-color: gray; position: relative; z-index: 2; top: -75px; left: 25px;}
+#absolute2 {background-color: aqua; position: absolute; z-index: 1; top: 50px; left: 50px;}
+#fixed2 {background-color: burlywood; position: fixed; z-index: 3; top: 75px; left: 75px;}
+
+#wrap { width: 300px; height: 800px; background-color: green;
+    margin: 300px auto;}
+#wrap > div {width: 100px; height: 100px;}
+#wrap > div > div {width: 50px; height: 50px; background-color: aqua;}
+#relative {background-color: red;   /*부모 태그에 영향을 받아서 위치 조정*/
+    top: 300px; left: 50px; position: relative; /*position 기본은 static*/
+    & > div {top: 10px; left: 10px; position: inherit;} /*position을 안주면 자식이더라도 static 적용(어떤 자식이더라고 부모 안에서 이동*/   /*inherit: 상속(부모가 가지고 있는 속성을 그대로 적용)*/
+}
+#absolute {background-color: gold;  /*가장 가까운 position 기준 없으면 body 기준 스크롤하면 그대로 같이 감*/
+    top: 300px; right: 50px; position: absolute;
+    & > div {top: 10px; left: 10px; position: inherit;}
+}
+#fixed {background-color: navy; /*브라우저 화면 기준 스크롤해도 그 자리 고정*/
+    top: 300px; left: 50px; position: fixed;
+    & > div {top: 10px; left: 10px; position: absolute;}
+}
