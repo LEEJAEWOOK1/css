@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0;}
 #header { 
     width : 700px; height: 100px;
-    display: flex;
+    display: flex;          /*해당 지점 기준으로 자식들이 가로배치*/
     background-color: brown;
 }
 #title_logo { 
@@ -15,20 +15,20 @@
     background-color: brown;
     width: 600px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;     /*양 끝으로 밀기, 사이 간격은 동일하게*/
 }
 #nav ul {
     list-style: none; display: flex;
-    align-items: center;
+    align-items: center;    /*내용을 가운데로*/
 }
-#nav ul li { margin: 0 10px;}
+#nav ul li { margin: 0 10px;}   /*바깥쪽으로 밀기(좌우로)*/
 #nav ul li a{text-decoration: none;
     color: white;
     font-size: 20px;
     &:hover { color: orange;
-    border-bottom: 2px solid orange;
-    padding-bottom: 5px;
-transition: 0.25s;}
+    border-bottom: 2px solid orange;    /*밑줄표시*/
+    padding-bottom: 5px;    /*안쪽으로 밀기*/
+    transition: 0.25s;}
 }
 #nav ul:nth-child(2) a {
     font-size: 13px;
