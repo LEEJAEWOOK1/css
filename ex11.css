@@ -9,7 +9,7 @@
     font-size: 25px;
     border-bottom: 3px dotted olive;
     width: 220px;
-    margin: auto;
+    margin: auto;   /*태그를 가운데로(블록요소+너비가 있을 때)*/
     padding: 10px 0;
     color: darkcyan;
 }
